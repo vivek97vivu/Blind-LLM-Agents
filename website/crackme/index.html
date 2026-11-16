@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.github.com https://ungh.cc https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <title>CrackMe — BLA (bla-agents)</title>
+    <meta
+      name="description"
+      content="Public BLA CrackMe status is read from challenge/README.md and the current SEAL.json in qybaihe/bla. This page does not publish a solve count."
+    />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <noscript>
+      <style>
+        @media (max-width: 1023px) {
+          .nav-toggle { display: none !important; }
+          .nav-panel {
+            display: flex !important;
+            position: static !important;
+            flex-direction: column;
+            background: transparent;
+            box-shadow: none;
+          }
+          .nav-bar { height: auto !important; min-height: 64px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+          .nav-links { flex-wrap: wrap; }
+        }
+      </style>
+    </noscript>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="../" class="brand">
+          <img src="../assets/logo.png" alt="BLA Shield Logo" class="brand-logo" width="38" height="38" />
+          <span>BLA</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <div class="nav-panel" id="site-nav">
+        <nav class="nav-links" data-i18n-attr="aria-label:nav.primary">
+          <a href="../" class="nav-link" data-i18n="nav.overview">Overview</a>
+          <a href="../get-started/" class="nav-link" data-i18n="nav.getStarted">Get Started</a>
+          <a href="../showcase/" class="nav-link" data-i18n="nav.showcase">Benchmarks</a>
+          <a href="./" class="nav-link active" data-i18n="nav.crackme">CrackMe</a>
+          <a href="../guides/" class="nav-link" data-i18n="nav.guides">Guides</a>
+          <a href="../faq/" class="nav-link" data-i18n="nav.faq">FAQ</a>
+          <a href="../enterprise/" class="nav-link" data-i18n="nav.enterprise">Enterprise</a>
+        </nav>
+        <div class="nav-actions">
+          <select id="bla-lang-select" class="lang-select" aria-label="Select Language" data-i18n-attr="aria-label:nav.lang">
+            <option value="en">🌐 English</option>
+            <option value="zh-CN">🌐 简体中文</option>
+            <option value="zh-TW">🌐 繁體中文</option>
+            <option value="ja">🌐 日本語</option>
+            <option value="ko">🌐 한국어</option>
+            <option value="es">🌐 Español</option>
+            <option value="fr">🌐 Français</option>
+            <option value="de">🌐 Deutsch</option>
+          </select>
+          <a href="https://github.com/qybaihe/bla" class="nav-cta" target="_blank" rel="noopener">
+            <span>★</span>
+            <span data-i18n="nav.star">Star</span>
+            <span class="star-pill" data-gh-stars data-state="loading">—</span>
+          </a>
+        </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 data-i18n="crackme.title">Public CrackMe</h1>
+          <p class="lede" data-i18n="crackme.lede">
+            The version marked current, its README status, and the public SEAL commitment are loaded from the qybaihe/bla repository when you open this page.
+          </p>
+          <section class="live-panel" data-crackme-live data-state="loading" aria-live="polite">
+            <h2 data-i18n="live.crackme.heading">Repository challenge status</h2>
+            <dl class="live-dl">
+              <dt data-i18n="live.crackme.version">Version marked current</dt>
+              <dd data-crackme-version>—</dd>
+              <dt data-i18n="live.crackme.status">Status word in README</dt>
+              <dd data-crackme-status>—</dd>
+              <dt data-i18n="live.crackme.product">Product in SEAL.json</dt>
+              <dd data-crackme-product>—</dd>
+              <dt data-i18n="live.crackme.engine">blaVersion in SEAL.json</dt>
+              <dd data-crackme-engine>—</dd>
+              <dt data-i18n="live.crackme.label">SEAL label</dt>
+              <dd data-crackme-label>—</dd>
+              <dt data-i18n="live.crackme.flag">Public flagSha256</dt>
+              <dd data-crackme-flag>—</dd>
+            </dl>
+            <p class="live-note" data-i18n="live.crackme.commitment">
+              SEAL fields are the published build commitment in git, read when this page fetches the file. They are not a live security score.
+            </p>
+            <p class="live-note" data-i18n="live.crackme.noSolve">
+              Verified solve count: no public authoritative counter. GitHub issues are submissions, not confirmed solves. CI success is not a red-team result.
+            </p>
+            <h3 data-i18n="live.crackme.history">Other rows in challenge/README.md</h3>
+            <ul class="live-history" data-crackme-history></ul>
+            <p>
+              <a class="nav-cta" data-crackme-link href="https://github.com/qybaihe/bla/tree/main/challenge" target="_blank" rel="noopener" data-i18n="live.crackme.open">
+                Open this version on GitHub
+              </a>
+            </p>
+            <p class="live-stamp" data-live-stamp="crackme" data-state="loading"></p>
+            <noscript>
+              <p>Without JavaScript this page does not display a current CrackMe version or a star count.</p>
+            </noscript>
+          </section>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card prose">
+              <span class="card-tag">01 · Single Source of Truth</span>
+              <h2 data-i18n="crackme.why.title">Where the status lives</h2>
+              <p data-i18n="crackme.why.body">
+                challenge/README.md in the repository is the maintained status table. This website does not keep a second copy of that table, and it does not turn GitHub issues or CI into a solved count.
+              </p>
+
+              <h2 data-i18n="crackme.run.title">Run</h2>
+              <pre><code>See the version directory linked above. The run command is in that directory's README.</code></pre>
+            </div>
+
+            <div class="card prose">
+              <span class="card-tag">02 · Verification Rules</span>
+              <h2 data-i18n="crackme.tiers.title">What a public solve must match</h2>
+              <ul>
+                <li data-i18n="crackme.tiers.l1">The current challenge directory is linked from the status panel after the repository file loads.</li>
+                <li data-i18n="crackme.tiers.l2">A solve is a FLAG whose SHA-256 equals flagSha256 in that version's SEAL.json.</li>
+                <li data-i18n="crackme.tiers.l3">Plaintext key and FLAG are not in git. Issue templates collect submissions; they are not a confirmed-solve tally.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-top: 28px">
+            <div class="card prose">
+              <span class="card-tag">03 · Submission</span>
+              <h2 data-i18n="crackme.submit.title">Submit a solve</h2>
+              <p data-i18n="crackme.submit.body">
+                Use the issue template for the version you solved. The status panel shows the flagSha256 published in the current SEAL.json.
+              </p>
+              <p style="margin-top: 18px; margin-bottom: 0">
+                <a class="btn-primary" href="https://github.com/qybaihe/bla/tree/main/challenge" target="_blank" rel="noopener" data-i18n="crackme.cta">
+                  Open the challenge directory on GitHub
+                </a>
+              </p>
+            </div>
+
+            <div class="card note-card prose">
+              <span class="card-tag">04 · Threat Boundary</span>
+              <h2 data-i18n="crackme.honest.title">Honest scope</h2>
+              <p data-i18n="crackme.honest.body">
+                BLA raises cost for automated AI reverse-engineering agents and plants decoys.
+                It does not claim immunity to patient interactive human reverse engineering.
+                The panel does not report a live break count.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div data-i18n-html="footer.tagline"><strong>BLA (`bla-agents`)</strong> · Blind LLM Agents · Software Protection MCP &amp; CLI</div>
+        <div>
+          <a href="mailto:qybaihe@gmail.com">qybaihe@gmail.com</a> ·
+          <a href="../enterprise/" data-i18n="nav.enterprise">Enterprise</a> ·
+          <a href="https://github.com/qybaihe/bla">GitHub ★</a> ·
+          <a href="../" data-i18n="nav.overview">Overview</a>
+        </div>
+        <p class="live-stamp" data-live-stamp="stars" data-state="loading"></p>
+      </div>
+    </footer>
+    <script src="../assets/i18n.js"></script>
+    <script type="module" src="../assets/main.js"></script>
+  </body>
+</html>
