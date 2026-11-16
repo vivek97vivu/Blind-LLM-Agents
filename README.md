@@ -1,6 +1,5 @@
 <div align="center">
 
-**English** · [简体中文](docs/readme/README_zh.md) · [繁體中文](docs/readme/README_zh-TW.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Türkçe](docs/readme/README_tr.md) · [Русский](docs/readme/README_ru.md) · [Tiếng Việt](docs/readme/README_vi.md) · [ไทย](docs/readme/README_th.md) · [Deutsch](docs/readme/README_de.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Українська](docs/readme/README_uk.md) · [Polski](docs/readme/README_pl.md) · [Português (Brasil)](docs/readme/README_pt-BR.md) · [العربية](docs/readme/README_ar.md) · [فارسی](docs/readme/README_fa.md) · [Bahasa Indonesia](docs/readme/README_id.md) · [Italiano](docs/readme/README_it.md) · [Ελληνικά](docs/readme/README_el.md) · [മലയാളം](docs/readme/README_ml.md) · [Roman Urdu](docs/readme/README_ur-Latn.md) · [Română](docs/readme/README_ro.md)
 
 <br />
 
@@ -19,11 +18,8 @@
 [![Counter-REA](https://img.shields.io/badge/Counter--REA-Empirically_Verified-1d4ed8?style=for-the-badge)](#empirical-results-vs-real-rea)
 [![MIT License](https://img.shields.io/badge/License-MIT-38bdf8?style=for-the-badge)](LICENSE)
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/323569" target="_blank" rel="noopener noreferrer">
-    <img src="docs/assets/bla-github-trending-badge.png" alt="GitHub Trending — #15 Repository Of The Day" width="270" height="54"/>
-  </a>
-</p>
+
+
 
 **[🌐 Official Website](https://bla.tools/) · [📖 Defense Guides](https://bla.tools/guides/) · [📊 Live Benchmarks](https://bla.tools/showcase/) · [🎯 CrackMe Arena](https://bla.tools/crackme/) · [🏢 Enterprise](https://bla.tools/enterprise/) · [⚖️ Disclaimer](DISCLAIMER.md)**
 
@@ -324,15 +320,3 @@ node scripts/verify-website.mjs
 ## 📄 License
 
 [MIT](LICENSE)
-
-## Star history
-
-[Star History](https://www.star-history.com/?repos=qybaihe%2Fbla&type=date&legend=top-left) draws the GitHub star growth for [`qybaihe/bla`](https://github.com/qybaihe/bla). The chart image is cached for about a day and is not a per-second count. Select it to open the full history.
-
-<a href="https://www.star-history.com/?repos=qybaihe%2Fbla&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=qybaihe/bla&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=qybaihe/bla&type=date&legend=top-left" />
-   <img alt="Star history chart for the qybaihe/bla GitHub repository" src="https://api.star-history.com/chart?repos=qybaihe/bla&type=date&legend=top-left" />
- </picture>
-</a>
